@@ -1,6 +1,18 @@
-function calcUnits(a, b) {
-    return a / (b ** 2)
+
+//Function calculates units for Metric system
+
+function calcUnits(weight, height) {
+    return weight / (height ** 2)
 }
+
+//Function calculates units for Imperial system
+
+function calc_Imperial_Units(weight, height) {
+    return weight / (height ** 2) * 703;
+}
+
+//Function returns user's age
+
 function getGender(value) {
     let result;
 
@@ -13,7 +25,11 @@ function getGender(value) {
     return result;
 }
 
+//Exported Functions to bmiCalculator.js
+
 module.exports = {
     getGender,
-    calcUnits
+    calcUnits,
+    calc_Imperial_Units
+
 };
